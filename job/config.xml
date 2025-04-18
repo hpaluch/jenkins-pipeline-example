@@ -36,7 +36,6 @@
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
           <url>https://github.com/hpaluch/jenkins-pipeline-example.git</url>
-          <credentialsId>GIT_SSH</credentialsId>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
