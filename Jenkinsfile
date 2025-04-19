@@ -22,14 +22,12 @@ pipeline {
     }
     post {
         always {
-            node('linux'){
-               echo "Running Post-Always handler..."
-               echo "e-mail target '$NOTIFICATION_EMAIL'"
-               step([$class: 'Mailer',
-                    notifyEveryUnstableBuild: true,
-                    recipients: "$NOTIFICATION_EMAIL",
-                    sendToIndividuals: false])                    
-            }
+            echo "Running Post-Always handler..."
+            echo "e-mail target '$NOTIFICATION_EMAIL'"
+            step([$class: 'Mailer',
+                notifyEveryUnstableBuild: true,
+               recipients: "$NOTIFICATION_EMAIL",
+               sendToIndividuals: false])
         }
     }
 }
